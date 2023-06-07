@@ -1,0 +1,42 @@
+.form-field {
+  .v-field {
+    &:not(.v-field--focused):not(.v-field--dirty):not(.v-field--error) {
+      .v-field__outline {
+        opacity: 0;
+      }
+    }
+  }
+  .v-input__details {
+    padding-top: 3px;
+    min-height: 0;
+  }
+}
+
+.form-checkbox.v-checkbox {
+  .v-selection-control {
+    min-height: 0;
+  }
+  .v-input__details {
+    padding-top: 0;
+    min-height: 0;
+    padding-left: 40px;
+  }
+  .v-label {
+    opacity: 1;
+  }
+  .v-selection-control {
+    .v-selection-control__input {
+      color: rgb(var(--v-theme-grey));
+    }
+    &.v-selection-control--dirty .v-selection-control__input {
+      color: rgb(var(--v-theme-primary));
+    }
+  }
+}
+
+.v-btn.button-default {
+  background-color: rgb(var(--v-theme-primary-light));
+  color: rgb(var(--v-theme-white));
+  min-width: 147px;
+  height: 40px;
+}

@@ -1,0 +1,40 @@
+@use 'sass:math';
+
+body {
+  color: rgb(var(--v-theme-on-background));
+}
+
+.text-extended {
+  font-family: 'Typold Extended', sans-serif;
+  font-weight: 500;
+}
+
+.container {
+  max-width: 924px;
+  margin: 0 auto;
+}
+
+.page-container {
+  padding: 24px 0 60px;
+}
+
+.stroked {
+  $color: rgb(var(--v-theme-border));
+  $size: 1px;
+  $halfSize: math.div($size, 2);
+  text-shadow: $size 0 $color, #{-$size} 0 $color, 0 $size $color, 0 #{-$size} $color,
+    $halfSize $halfSize $color, #{-$halfSize} #{-$halfSize} $color, $halfSize #{-$halfSize} $color,
+    #{-$halfSize} $halfSize $color;
+}
+
+.border-default {
+  border: 1px solid rgb(var(--v-theme-border)) !important;
+}
+
+a {
+  color: rgb(var(--v-theme-primary));
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+  }
+}
